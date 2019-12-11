@@ -1,0 +1,68 @@
+
+<div class="container">
+
+  <h2>Lista  de  Datos </h2>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link " data-toggle="collapse" href="#collapseOne">
+           Filtros
+        </a>
+        
+      </div>
+      <div id="collapseOne"  data-parent="#accordion">
+        <div class="card-body " >
+          
+          <input  class="form-control col-sm-2" type="text" placeholder="buscador"name="filterPlanContable">
+       <button class="btn btn-info" style="margin-left: 10px"> <i class="fas fa-search"></i> Buscar</button>
+         
+        </div>
+      </div>
+    </div>
+    
+
+  <br>
+<table class="table display"   id="table_id">
+  <thead  class="thead-dark" >
+<tr>
+  <th> NUMERO </th>
+  <th>FECHA</th>
+  <th>DETALLE </th>
+  <th>CODIGO </th>
+  <th>DESCRIPCION</th>
+  <th>HABER </th>
+  <th>DEBER</th>
+  <th>ESTADO</th>
+  <th>OPERACIONES</th>
+  
+</tr>
+</thead>
+<tbody>
+<tr  *ngFor ="let data of  datosPlanContable "> 
+  <td>{{data.id_planContable}}</td>
+  <td>{{data.fecha}}</td>
+  <td>{{data.detalle}}</td>
+  <td>{{data.codigo}}</td>
+  <td>{{data.descripcion}}</td>
+  <td>{{data.haber}}</td>
+  <td>{{data.deber}}</td>
+  <td>{{data.estado}}</td>
+
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+

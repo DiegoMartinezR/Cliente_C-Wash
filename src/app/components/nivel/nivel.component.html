@@ -1,0 +1,64 @@
+<div class="col-16">
+
+  <div  class="card ">
+
+    
+      <div class="card-header"><h3>CATALOGO DE NIVEL    <i class="fas fa-table"></i></h3></div>
+      <br>
+
+
+      <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                Filtros
+              </a>
+            </div>
+            <div id="collapseOne"  data-parent="#accordion">
+              <div class="card-body " >
+                <input class="form-control col-sm-1  " type="number " placeholder="nivel" style="margin-left: 10px"[(ngModel)]="nivel">   
+                <input  class="form-control col-sm-1" type="number" placeholder="subnivel" style="margin-left: 10px" [(ngModel)]="padre_nivel">
+                <div class=" form-group col-sm-4 " style="margin-inline-start: 10px">
+                    <input  class="form-control" type="text" placeholder="buscador"[(ngModel)]="filterNivel" name="filterNivel">
+              
+                  </div>
+                <button style="margin-left: 10px" class="btn btn-info" (click)="enviar()"> <i class="fas fa-search"></i> Buscar</button>
+                
+              </div>
+            </div>
+          </div>
+          <table class="table"  border="1">
+              <thead  class="thead-dark" >
+            <tr>
+           
+              <th>CODIGO</th>
+              <th>DESCRIPCION </th>
+              <th>NIVEL </th>
+              <th>SUB NIVEL</th>
+              
+            </tr>
+          </thead>
+          <tr *ngFor="let niv of Nivel | filter:filterNivel"  > 
+          
+        
+            <td>{{niv.codigonivel}}</td>
+            <td>{{niv.descripcion}}</td>
+            <td>{{niv.nivel}}</td>
+            <td>{{niv.padre_nivel}}</td>
+            
+          </tr>
+          
+          
+            </table>
+          
+        </div>
+
+
+
+
+      
+  
+</div>
+</div>
+  
+

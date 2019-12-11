@@ -1,0 +1,36 @@
+<!-- multistep form -->
+<form id="msform" style="margin-bottom: 30px; margin-top: 120px;">
+	<!-- progressbar -->
+	<ul id="progressbar">
+	  <li class="active">Crea tu Cuenta</li>
+	  <li>Tipo de usuario</li>
+	  <li>Datos Personales</li>
+	</ul>
+	<!-- fieldsets -->
+	<fieldset>
+	  <h2 class="fs-title">Crea tu Cuenta</h2>
+	  <h3 class="fs-subtitle">Paso 1</h3>
+	  <input type="text" name="email" placeholder="Correo" />
+	  <input type="password" name="pass" placeholder="Contraseña" />
+	  <input type="password" name="cpass" placeholder="Confirma Contraseña" />
+	  <input type="button" name="next" class="next action-button" value="Siguiente" />
+	</fieldset>
+	<fieldset>
+	  <h2 class="fs-title">Tipo de usuario</h2>
+	  <h3 class="fs-subtitle">Paso 2</h3>
+	  <input type="text" name="cliente" placeholder="Necesito buscar puntos C-Wash"  />
+	  <input type="text" name="proveedor" placeholder="Quiero pertenecer a C-Wash" />
+	  <input type="button" name="previous" class="previous action-button" value="Atrás" />
+	  <input type="button" name="next" class="next action-button" value="Siguiente" />
+	</fieldset>
+	<fieldset>
+	  <h2 class="fs-title">Datos Personales</h2>
+	  <h3 class="fs-subtitle">Paso 3</h3>
+	  <input type="text" name="fname" placeholder="Nombres" />
+	  <input type="text" name="lname" placeholder="Apellidos" />
+	  <input type="text" name="phone" placeholder="Teléfono" />
+	  <textarea name="address" placeholder="Address"></textarea>
+	  <input type="button" name="previous" class="previous action-button" value="Atrás" />
+	  <input type="submit" name="submit" class="submit action-button" value="Crear" />
+	</fieldset>
+  </form>

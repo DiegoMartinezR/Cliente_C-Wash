@@ -1,0 +1,49 @@
+<div class="container">
+    <h2>Plan  Mensual  <i class="fas fa-table"></i></h2>
+    <br>
+    <div id="accordion">
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+              Filtros
+            </a>
+          </div>
+          <div id="collapseOne"  data-parent="#accordion">
+            <div class="card-body " >
+               
+              <input  class="form-control col-sm-1" type="number" placeholder="mes" style="margin-left: 10px"[(ngModel)]="mes">
+              <input class="form-control col-sm-1" type="number" placeholder="año" style="margin-left: 10px" [(ngModel)]="anio">
+              <button class="btn btn-info" style="margin-left: 10px" (click)="enviarMes()"> <i class="fas fa-search"></i> Buscar</button>
+
+           
+             
+            </div>
+          </div>
+        </div>
+        
+        
+        </div>
+<br>
+  <table class="table"  border="1">
+    <thead  class="thead-dark" >
+  <tr>
+    <th>NUMERO</th>
+    <th>DETALLE </th>
+    <th>FECHA</th>
+    <th>HABER </th>
+    <th>DEBER</th>
+  
+  
+  </tr>
+  <tr *ngFor ="let itenMes of dato">
+    <td>{{itenMes.id_planMensual}}</td>
+    <td>{{itenMes.detalle}}</td>
+    <td>{{itenMes.fecha}}</td>
+    <td>{{itenMes.sum_haber}}</td>
+    <td>{{itenMes.sum_deber}}</td>
+  </tr>
+
+
+  </thead>
+  </table>
+  </div>

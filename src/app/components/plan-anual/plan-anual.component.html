@@ -1,0 +1,45 @@
+<div class="container">
+<h2>Plan  Anual  <i class="fas fa-table"></i></h2>
+<br>
+    <div id="accordion">
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+              Filtros
+            </a>
+          </div>
+          <div id="collapseOne"  data-parent="#accordion">
+            <div class="card-body " >
+        
+              <input class="form-control col-sm-2" type="number" placeholder="año"[(ngModel)]="anio">
+
+           <button class="btn btn-info" style="margin-left: 10px" (click)="enviarAnio()"> <i class="fas fa-search"></i> Buscar</button>
+             
+            </div>
+          </div>
+        </div>
+        
+        
+        </div>
+<br>
+  <table class="table"  border="1">
+    <thead  class="thead-dark" >
+  <tr>
+    <th>NUMERO</th>
+    <th>FECHA</th>
+    <th>DETALLE </th>
+    <th>HABER </th>
+    <th>DEBER</th>
+   
+    
+  </tr>
+  </thead>
+  <tr *ngFor="let itemanio of  datoanio">
+     <td>{{itemanio.id_planAnual}}</td>
+    <td>{{itemanio.fecha}}</td>
+    <td>{{itemanio.detalle}}</td>
+    <td>{{itemanio.sum_haber}}</td>
+    <td>{{itemanio.sum_deber}}</td>
+  </tr>
+  </table>
+  </div>

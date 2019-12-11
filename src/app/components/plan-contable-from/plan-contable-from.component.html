@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="row justify">
+  <div class="col-5">
+  <div  class="card border-primary">
+      <div class="card-header"><h3>NUEVO  DATO</h3></div>
+    <div class="card-body " >
+      <form >
+        <table>
+           
+        <div class="form-group" style="margin-inline-start: 10px">
+             Detalle:  <input  type="text" class="form-control" [(ngModel)]="datonew.detalle"  name="detalle" placeholder=" valor para  el  detalle" >
+        </div>
+        
+        <div class="form-group" style="margin-inline-start: 10px">
+          
+            Codigo:  
+            <div class=" form-group" >
+                <input  class="form-control" type="text" placeholder="buscador"[(ngModel)]="filterNivel" name="filterNivel" style="margin: 10px">
+          </div>
+            <select   class="form-control form-control-lg " style="margin: 10px">
+                <option *ngFor="let  niv  of niveles " >
+                  {{niv.codigonivel}}
+                  {{niv.descripcion}}
+                </option>
+               
+              </select>
+
+            <input   type="number" class="form-control"[(ngModel)]="datonew.codigo" name="codigo" placeholder=" valor del  codigo" style="margin: 10px">
+  </div>
+  <div class="form-group" style="margin-inline-start: 10px">
+      Fecha:  <input  type="date" class="form-control"  [(ngModel)]="datonew.fecha"  name="fecha" placeholder=" valor para  el  fecha"style="margin: 10px">
+ </div>
+  
+<h4>  Valores </h4>  
+<div class="form-group " style="margin-inline-start: 10px">
+    Haber : <input  type="number" class="form-control" [(ngModel)]= "datonew.haber" name="haber"style="margin: 10px" >
+</div><div class="form-group"style="margin-inline-start: 10px">
+  Deber : <input  type="number"  class="form-control" [(ngModel)]= "datonew.deber"  name="deber"style="margin: 10px" >
+</div>
+
+<div class="form-group" style="margin-inline-start: 10px">
+   
+    Estado :
+    <div class="form-check form-check-inline" style="margin-inline-start: 10px">
+          <input class="form-check-input" type="radio" [(ngModel)]= "datonew.estado" name="gridRadios" id="gridRadios1" value="0" checked >
+          <label class="form-check-label" for="gridRadios1"  >negativo
+          </label>
+        </div>
+        <div class="form-check form-check-inline" style="margin-inline-start: 10px">
+          <input class="form-check-input" [(ngModel)]= "datonew.estado" type="radio" name="gridRadios" id="gridRadios2" value="1" >
+          <label class="form-check-label" for="gridRadios2"> activo
+          </label>
+        </div>
+</div>
+<button  class="btn btn-info btn" (click)=" edit ? updateplanContable() : saveDato()">
+  Guardar 
+</button>
+
+</table>
+      </form>
+    </div>
+
+  </div>
+ </div>
+  <div class="col-7">
+      <div  class="card border-primary">
+          <div class="card-header"><h3>NIVELES </h3></div>
+         
+          <div  class="card-body">
+          <table  class="table">
+            
+            <tr>
+
+              
+              <th>CODIGO </th>
+              <th>DESCRIPCION</th>
+              
+            </tr>
+            
+            <tr *ngFor="let  niv  of niveles | filter:filterNivel"  > 
+
+
+                <td>{{niv.codigonivel}}</td>
+                <td>{{niv.descripcion}}</td>
+          
+            </tr>
+           
+            </table>
+      </div>
+    </div>
+  </div>
+
+</div>
