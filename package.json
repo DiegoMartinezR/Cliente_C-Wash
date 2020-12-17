@@ -21,7 +21,7 @@
     "@angular/router": "~7.2.0",
     "@ng-bootstrap/ng-bootstrap": "^4.2.1",
     "core-js": "^2.5.4",
-    "datatables.net": "^1.10.19",
+    "datatables.net": "^1.10.22",
     "ngx-pagination": "^3.3.0",
     "ngx-spinner": "^7.1.4",
     "rxjs": "~6.3.3",
